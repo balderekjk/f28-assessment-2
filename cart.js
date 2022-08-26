@@ -34,6 +34,7 @@ const cart = [
 
 //CODE HERE
 
+// initial value defaults to first value in the list!
 const summedPrice = cart.reduce((a, c) => (c.price += a), 0);
 // console.log(summedPrice);
 
@@ -56,7 +57,7 @@ const summedPrice = cart.reduce((a, c) => (c.price += a), 0);
 const calcFinalPrice = (cartTotal, couponValue, tax) => {
   return cartTotal * (1 + tax) - couponValue;
 };
-// console.log(calcFinalPrice(5, 2, 0.1));
+// console.log(calcFinalPrice(summedPrice, 2, 0.1));
 
 //////////////////PROBLEM 3////////////////////
 /*  

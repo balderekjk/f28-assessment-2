@@ -68,7 +68,7 @@ const pizza = {
 */
 
 //CODE HERE
-const { price } = pizza;
+let { price } = pizza;
 // console.log(price);
 
 /*
@@ -79,7 +79,7 @@ const { price } = pizza;
 */
 
 //CODE HERE
-const { category } = pizza;
+let { category } = pizza;
 // console.log(category);
 
 //////////////////PROBLEM 3////////////////////
@@ -216,4 +216,4 @@ const filterByProperty = (property, number, type) => {
 */
 
 //CODE HERE
-console.log(filterByProperty('rating', 8, 'below'));
+// console.log(filterByProperty('rating', 8, 'below'));
