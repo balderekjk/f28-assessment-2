@@ -7,7 +7,6 @@
     creating customer objects.  
 */
 
-
 //////////////////PROBLEM 1////////////////////
 /*  
     Below is a cart array that has food objects
@@ -19,24 +18,24 @@
 */
 
 const cart = [
-    {
-        name: 'pizza', 
-        price: 9.99
-    }, 
-    {
-        name: 'pasta', 
-        price: 8.99
-    }, 
-    {
-        name: 'salad', 
-        price: 7.99
-    }
-]
+  {
+    name: 'pizza',
+    price: 9.99,
+  },
+  {
+    name: 'pasta',
+    price: 8.99,
+  },
+  {
+    name: 'salad',
+    price: 7.99,
+  },
+];
 
 //CODE HERE
 
-// const summedPrice = cart.reduce(/* CALLBACK HERE */)
-
+const summedPrice = cart.reduce((a, c) => (c.price += a), 0);
+// console.log(summedPrice);
 
 //////////////////PROBLEM 2////////////////////
 /*  
@@ -54,8 +53,10 @@ const cart = [
 */
 
 //CODE HERE
-
-
+const calcFinalPrice = (cartTotal, couponValue, tax) => {
+  return cartTotal * (1 + tax) - couponValue;
+};
+// console.log(calcFinalPrice(5, 2, 0.1));
 
 //////////////////PROBLEM 3////////////////////
 /*  
@@ -78,7 +79,18 @@ const cart = [
 */
 
 /*
-    TEXT ANSWER HERE
+	// need to know food to make and price
+	foodOrdered: array of objects
+		// name (string) and price (num) within
+	// need to know phone to contact update
+	phoneNum: string
+	// any coupons used, factor into total
+	couponAmount: num
+	// as in dine-in reservation, pick-up, delivery?
+	arrangement: string
+	// time the arrangement will be ready
+	time: string
+	
 
 */
 
@@ -88,3 +100,13 @@ const cart = [
 */
 
 //CODE HERE
+const customer = {
+  foodOrdered: {
+    name: 'original ramen',
+    price: '$7.99',
+  },
+  phoneNum: '808-293-4901',
+  couponAmount: 0,
+  arrangement: 'pick-up',
+  time: '7:00PM',
+};
