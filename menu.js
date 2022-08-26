@@ -197,6 +197,16 @@ const filteredFood = foodArr.filter((pizza) => {
 */
 
 //CODE HERE
+const filterByProperty = (property, number, type) => {
+  let filteredArr = foodArr.filter((pizza) => {
+    if (type === 'above') {
+      return pizza[property] > number;
+    } else if (type === 'below') {
+      return pizza[property] < number;
+    }
+  });
+  return filteredArr;
+};
 
 /*
     Invoke the `filterByProperty` function passing
@@ -206,3 +216,4 @@ const filteredFood = foodArr.filter((pizza) => {
 */
 
 //CODE HERE
+console.log(filterByProperty('rating', 8, 'below'));
