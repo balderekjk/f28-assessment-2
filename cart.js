@@ -84,6 +84,8 @@ const calcFinalPrice = (cartTotal, couponValue, tax) => {
 		// name (string) and price (num) within
 	// need to know phone to contact update
 	phoneNum: string
+	// name needed for security
+	name: string
 	// any coupons used, factor into total
 	couponAmount: num
 	// as in dine-in reservation, pick-up, delivery?
@@ -106,6 +108,7 @@ const customer = {
     price: '$7.99',
   },
   phoneNum: '808-293-4901',
+  name: 'Derek Bal',
   couponAmount: 0,
   arrangement: 'pick-up',
   time: '7:00PM',
